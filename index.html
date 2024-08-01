@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="restart-section hidden">
+      <div class="again-tooltip">
+        Play again?
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h1>Tic-Tac-Toe!</h1>
+      <form class="player-form">
+        <div class="player1-container">
+          <label for="player1-input">PLAYER ONE'S NAME</label>
+          <input name="player1" id="player1-input" type="text" required />
+        </div>
+        <div class="player2-container">
+          <label for="player2-input">PLAYER TWO'S NAME</label>
+          <input name="player2" id="player2-input" type="text" required />
+        </div>
+        <button id="submit" type="submit">SUBMIT</button>
+      </form>
+    </div>
+
+    <div class="game-section hidden">
+      <div class="header">
+        <div class="title">PLAYER ONE'S TURN!</div>
+        <div class="player1">
+          <img src="circle-outline.svg" alt="circle" />
+        </div>
+        <div class="score">0 - 0</div>
+        <div class="player2">
+          <img src="close.svg" alt="cross" />
+        </div>
+      </div>
+      <div class="gameboard">
+        <div data-row="0" data-col="0">
+          <div class="cell"></div>
+        </div>
+        <div data-row="0" data-col="1">
+          <div class="cell"></div>
+        </div>
+        <div data-row="0" data-col="2">
+          <div class="cell"></div>
+        </div>
+        <div data-row="1" data-col="0">
+          <div class="cell"></div>
+        </div>
+        <div data-row="1" data-col="1">
+          <div class="cell"></div>
+        </div>
+        <div data-row="1" data-col="2">
+          <div class="cell"></div>
+        </div>
+        <div data-row="2" data-col="0">
+          <div class="cell"></div>
+        </div>
+        <div data-row="2" data-col="1">
+          <div class="cell"></div>
+        </div>
+        <div data-row="2" data-col="2">
+          <div class="cell"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="js/player.js"></script>
+  <script src="js/gameboard.js"></script>
+  <script src="js/gameboard-controller.js"></script>
+  <script src="js/gameboard-view.js"></script>
+  <script src="js/cursor.js"></script>
+</html>

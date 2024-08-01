@@ -1,0 +1,215 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Sofia Sans", serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.hidden {
+  display: none;
+}
+
+img {
+  height: 1.75rem;
+  width: 1.75rem;
+}
+
+.gameboard img {
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  gap: 10px 30px;
+
+  position: fixed;
+  top: 10vh;
+  left: 50vw;
+
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  grid-column: 1 / 4;
+
+  font-size: 1.75rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.player1, .player2, .score {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.player1, .player2 {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.score {
+  text-align: center;
+  font-weight: 800;
+}
+
+.player2 {
+  justify-content: flex-end;
+
+  text-align: right;
+}
+
+.gameboard {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  gap: 30px;
+
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  
+  transform: translate(-50%, -50%);
+}
+
+.cell {
+  height: 200px;
+  width: 200px;
+
+  background-color: #EFEFEF;
+  cursor: pointer;
+
+  transition: transform 0.1s ease-in-out;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+}
+
+.player-form {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  gap: 20px 5px;
+  
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  padding: 30px 40px;
+
+  background-color: black;
+  color: white;
+
+  transform: translate(-50%, -50%);
+}
+
+.form-section > h1 {
+  position: fixed;
+  top: 35vh;
+  left: 50vw;
+
+  font-size: 5rem;
+  font-weight: 800;
+  color: black;
+
+  transform: translate(-50%, -50%);
+}
+
+label {
+  display: block;
+  width: 100%;
+
+  font-size: 0.9rem;
+}
+
+.player2-container > label {
+  text-align: right;
+}
+
+input {
+  width: 100%;
+  padding: 5px 10px;
+  border: none;
+}
+
+#submit {
+  grid-column: 1 / 3;
+  padding: 5px;
+
+  font-size: 0.9rem;
+  
+  background-color: #EFEFEF;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.restart-section {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+
+  cursor: pointer;
+  z-index: 1;
+}
+
+.again-tooltip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+
+  background-color: black;
+  color: white;
+
+  border-radius: 10px;
+}
